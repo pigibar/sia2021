@@ -1,0 +1,9 @@
+<odoo>
+    <data>
+      <template id="my_custom_template" inherit_id="website.website_template_id">
+          <xpath expr="//div[@class='some_class']" position="inside">
+              <h1>Il mio contenuto personalizzato</h1>
+          </xpath>
+      </template>
+    <data>
+</odoo>

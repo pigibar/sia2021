@@ -1,0 +1,49 @@
+<odoo>
+  <data>
+<!-- Definizione delle viste di Segnalazione -->
+    <record id="view_segnalazione_tree" model="ir.ui.view">
+        <field name="name">segnalazione.tree</field>
+        <field name="model">segnalazione.model</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="descrizione"/>
+                <field name="stato"/>
+                <field name="data"/>
+                <field name="ora"/>
+                <field name="municipio_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_segnalazione_form" model="ir.ui.view">
+        <field name="name">segnalazione.form</field>
+        <field name="model">segnalazione.model</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name"/>
+                    <field name="descrizione"/>
+                    <field name="posizione"/>
+                    <field name="stato"/>
+                </group>
+                <group>
+                    <field name="data"/>
+                    <field name="ora"/>
+                    <field name="utente_id"/>
+                    <field name="municipio_id"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_gestione_segnalazioni" model="ir.actions.act_window">
+        <field name="name">Gestione delle Segnalazioni</field>
+        <field name="res_model">segnalazione.model</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_gestione_segnalazioni" name="Gestione delle Segnalazioni"
+              parent="base.menu_custom" action="action_gestione_segnalazioni"/>
+  </data>
+</odoo>

@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+        <template id="lista_segnalazioni" name="Lista Segnalazioni">
+            <t t-call="website.layout">
+                <div class="container">
+                    <h1>Le tue segnalazioni</h1>
+                    <ul>
+                        <t t-foreach="segnalazioni" t-as="segnalazione">
+                            <li>
+                                <strong><t t-esc="segnalazione.name"/></strong>: <t t-esc="segnalazione.descrizione"/>
+                            </li>
+                        </t>
+                    </ul>
+                </div>
+            </t>
+        </template>
+    </data> <!-- Corretto da <data> a </data> -->
+</odoo>

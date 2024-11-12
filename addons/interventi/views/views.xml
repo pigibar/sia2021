@@ -1,0 +1,38 @@
+<odoo>
+  <data>
+    <record id="view_intervento_tree" model="ir.ui.view">
+        <field name="name">intervento.tree</field>
+        <field name="model">romeeye.intervento</field>
+        <field name="arch" type="xml">
+            <tree string="Interventi">
+                <field name="name"/>
+                <field name="date"/>
+                <field name="location"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_intervento_form" model="ir.ui.view">
+        <field name="name">intervento.form</field>
+        <field name="model">romeeye.intervento</field>
+        <field name="arch" type="xml">
+            <form string="Intervento">
+                <group>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="date"/>
+                    <field name="location"/>
+                    <field name="agent_id"/>
+                    <field name="status"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <menuitem id="menu_romeeye" name="ROMEYE" sequence="1"/>
+
+    <menuitem id="menu_intervento" parent="menu_romeeye"
+              name="Interventi" sequence="1" action="action_interventi"/>
+  </data>
+</odoo>
